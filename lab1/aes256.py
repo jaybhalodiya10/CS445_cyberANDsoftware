@@ -13,8 +13,3 @@ class AES256Cipher:
         padded_data = pad(data, AES.block_size)
         cipher = AES.new(self.key, AES.MODE_CBC, self.iv)
         return cipher.encrypt(padded_data)
-
-    def encrypt_prepadded(self, padded_data: bytes) -> bytes:
-        
-        cipher = AES.new(self.key, AES.MODE_CBC, self.iv)
-        return cipher.encrypt(padded_data)

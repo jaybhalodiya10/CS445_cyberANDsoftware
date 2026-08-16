@@ -14,7 +14,3 @@ class AES128Cipher:
         cipher = AES.new(self.key, AES.MODE_CBC, self.iv)
         return cipher.encrypt(padded_data)
 
-    def encrypt_prepadded(self, padded_data: bytes) -> bytes:
-
-        cipher = AES.new(self.key, AES.MODE_CBC, self.iv)
-        return cipher.encrypt(padded_data)
