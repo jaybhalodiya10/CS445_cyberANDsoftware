@@ -1,0 +1,45 @@
+﻿Created By ExterroÂ® FTKÂ® Imager 8.2.0.59 
+
+Case Information: 
+Case Number: CS445_LAB3
+Evidence Number: EVD-001
+Unique description: IMAGE OF DRIVE G INCLUDING SOME PROJECT FILE(FRONTEND AND BACKEND) AND SOME VIDEOS, PICTURE, TXT FILES
+Examiner: JAY BHALODIYA (202351049)
+Notes:  
+
+--------------------------------------------------------------
+
+Information for D:\IMAGE_RESULT\G_EVIDENCE:
+
+Physical Evidentiary Item (Source) Information:
+  [Device Info]
+    Source Type: Logical
+  [Drive Geometry]
+    Bytes per Sector: 512
+    Sector Count: 8,189,952
+  [Physical Drive Information]
+    Removable drive: False
+    Source data size: 3999 MB
+    Sector count:    8189952
+  [Computed Hashes]
+    MD5 Hash:    4d366ff56bbfb04f23c54707eb60b305
+    SHA1 Hash:   bce928e259ebd76faad58c09d303bb2cf0b93372
+
+Verification Definitions:
+  Computed hash: The hash calculated of the source media during the creation or verify process
+  Stored verification hash: The hash calculated during image acquisition and stored inside the image
+  Report hash: The hash calculated during image acquisition and stored in the image summary report
+
+Image Information:
+  Acquisition started:   Tue Aug 25 18:31:32 2026 (2026-08-25T13:01:32Z)
+  Acquisition finished:  Tue Aug 25 18:32:17 2026 (2026-08-25T13:02:17Z)
+  Segment list:
+    D:\IMAGE_RESULT\G_EVIDENCE.001
+
+Image Verification Results:
+  Verification started:  Tue Aug 25 18:32:17 2026 (2026-08-25T13:02:17Z)
+  Verification finished: Tue Aug 25 18:32:22 2026 (2026-08-25T13:02:22Z)
+  MD5 - Computed hash:             4d366ff56bbfb04f23c54707eb60b305 : verified
+  MD5 - Report hash:               4d366ff56bbfb04f23c54707eb60b305 : verified
+  SHA1 - Computed hash:            bce928e259ebd76faad58c09d303bb2cf0b93372 : verified
+  SHA1 - Report hash:              bce928e259ebd76faad58c09d303bb2cf0b93372 : verified

