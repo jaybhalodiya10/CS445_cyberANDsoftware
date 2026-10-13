@@ -28,4 +28,4 @@ for item in glob.glob("./**/*.foo", recursive=True):  # FOR every file with exte
     OUT.close()
 #Jay Bhalodiya
 #202351049
-#a.foo file
+#a.foo
